@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../task_two/home_screen.dart';
+
 class LoginUiScreen extends StatefulWidget {
   const LoginUiScreen({super.key});
 
@@ -24,7 +26,18 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFC9C8C6),
-      appBar: AppBar(backgroundColor: Color(0xFFC9C8C6),title: const Text("Login",style: TextStyle(color: Color(0x6B000000),fontWeight: FontWeight.w400,fontSize: 30),), centerTitle: true),
+      appBar: AppBar(
+        backgroundColor: Color(0xFFC9C8C6),
+        title: const Text(
+          "Login",
+          style: TextStyle(
+            color: Color(0x6B000000),
+            fontWeight: FontWeight.w400,
+            fontSize: 30,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
@@ -124,6 +137,10 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                           ),
                         );
                       }
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
                     },
                     child: const Text("Login", style: TextStyle(fontSize: 20)),
                   ),
@@ -131,27 +148,28 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                 SizedBox(height: 5),
                 Align(
                   alignment: Alignment.topRight,
-                  child: RichText(text:
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "Don't have an account? ",
-                        style: TextStyle(
-                          color: Colors.black,    // প্রথম অংশের রঙ
-                          fontSize: 16,
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Don't have an account? ",
+                          style: TextStyle(
+                            color: Colors.black, // প্রথম অংশের রঙ
+                            fontSize: 16,
+                          ),
                         ),
-                      ),
-                      TextSpan(
-                        text: "Create new account",
-                        style: TextStyle(
-                          color: Colors.blue,     // দ্বিতীয় অংশের রঙ
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                        TextSpan(
+                          text: "Create new account",
+                          style: TextStyle(
+                            color: Colors.blue, // দ্বিতীয় অংশের রঙ
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                    ]
-                  )
-                  ),),
+                      ],
+                    ),
+                  ),
+                ),
                 SizedBox(height: 15),
                 InkWell(
                   onTap: () {},
@@ -216,7 +234,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15,),
+                SizedBox(height: 15),
                 InkWell(
                   onTap: () {},
                   child: Container(
