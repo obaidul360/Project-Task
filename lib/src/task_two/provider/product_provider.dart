@@ -44,4 +44,30 @@ class ProductProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  Map<int, int> productQuantity = {};
+  // Quantity functions
+  void addQuantity(int productId) {
+    if (productQuantity.containsKey(productId)) {
+      productQuantity[productId] = productQuantity[productId]! + 1;
+    } else {
+      productQuantity[productId] = 1;
+    }
+    notifyListeners();
+  }
+
+  void subtractQuantity(int productId) {
+    if (productQuantity.containsKey(productId) &&
+        productQuantity[productId]! > 0) {
+      productQuantity[productId] = productQuantity[productId]! - 1;
+      notifyListeners();
+    }
+  }
+
+  int getQuantity(int productId) {
+    return productQuantity[productId] ?? 0;
+  }
+
+  double getTotalPrice(int productId, double price) {
+    return getQuantity(productId) * price;
+  }
 }
