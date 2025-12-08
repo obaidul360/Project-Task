@@ -31,4 +31,17 @@ class ProductProvider extends ChangeNotifier {
 
     notifyListeners();
   }
+
+  // Filter Catagorise
+  void filterByCategory(String category) {
+    if (category == "Filter") {
+      filteredProducts = products;
+    } else {
+      filteredProducts = products
+          .where((p) => p.category.toLowerCase() == category.toLowerCase())
+          .toList();
+    }
+    notifyListeners();
+  }
+
 }

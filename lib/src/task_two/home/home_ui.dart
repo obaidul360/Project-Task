@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:scaleup/src/task_one/login_ui.dart';
 
 import '../provider/product_provider.dart';
+import '../widgets/filter_box.dart';
 import '../widgets/search_box.dart';
 
 class HomePage extends StatelessWidget {
@@ -39,6 +40,7 @@ class HomePage extends StatelessWidget {
           : Column(
               children: [
                 SearchBox(),
+                CategoryDropdown(),
                 Expanded(
                   child: ListView.builder(
                     itemCount: provider.filteredProducts.length,
