@@ -25,19 +25,19 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
-      appBar: AppBar(
+      backgroundColor: Color(0xF7FFFEFE),//Color(0xFFFFFFFF),
+      /*appBar: AppBar(
         backgroundColor: Color(0xBDFFFFFF),
         title: const Text(
-          "ScaleUp Add Agency Account",
+          "ScaleUp Account",
           style: TextStyle(
-            color: Color(0x6B000000),
-            fontWeight: FontWeight.w400,
-            fontSize: 30,
+            color: Colors.black,
+            fontWeight: FontWeight.w200,
+            fontSize: 28,
           ),
         ),
         centerTitle: true,
-      ),
+      ),*/
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
@@ -46,6 +46,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+
                 Center(
                   child: const Icon(
                     Icons.lock,
@@ -136,11 +137,11 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                             backgroundColor: Colors.green,
                           ),
                         );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                        );
                       }
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
                     },
                     child: const Text("Login", style: TextStyle(fontSize: 20)),
                   ),
@@ -156,7 +157,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                           style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                         TextSpan(
-                          text: "Create new account",
+                          text: "Create new account.",
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 16,

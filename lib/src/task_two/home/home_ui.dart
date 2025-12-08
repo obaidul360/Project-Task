@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:scaleup/src/task_one/ui.dart';
 
 import '../provider/product_provider.dart';
 import '../widgets/search_box.dart';
@@ -13,6 +14,9 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginUiScreen()));
+        }, icon: Icon(Icons.arrow_back_rounded)),
         title: const Text("Products"),
         backgroundColor: Color(0xB3E5C8C2),
         centerTitle: true,

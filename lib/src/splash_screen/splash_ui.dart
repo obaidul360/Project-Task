@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../form/login_ui.dart';
+import '../task_one/ui.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -35,7 +35,10 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/scale_up_logo.png"),fit: BoxFit.fill),
+          image: DecorationImage(
+            image: AssetImage("assets/scale_up_logo.png"),
+            fit: BoxFit.fill,
+          ),
         ),
       ),
     );
