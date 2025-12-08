@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../task_two/home_screen.dart';
+import '../task_two/home/home_ui.dart';
 
 class LoginUiScreen extends StatefulWidget {
   const LoginUiScreen({super.key});
@@ -25,11 +25,11 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFC9C8C6),
+      backgroundColor: Color(0xFFFFFFFF),
       appBar: AppBar(
-        backgroundColor: Color(0xFFC9C8C6),
+        backgroundColor: Color(0xBDFFFFFF),
         title: const Text(
-          "Login",
+          "ScaleUp Add Agency Account",
           style: TextStyle(
             color: Color(0x6B000000),
             fontWeight: FontWeight.w400,
@@ -125,7 +125,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                   child: ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(
-                        Color(0xFFFFFAF5),
+                        Color(0xFFFFFAF5), //Color(0xFFFFFAF5),
                       ),
                     ),
                     onPressed: () {
@@ -153,15 +153,12 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                       children: [
                         TextSpan(
                           text: "Don't have an account? ",
-                          style: TextStyle(
-                            color: Colors.black, // প্রথম অংশের রঙ
-                            fontSize: 16,
-                          ),
+                          style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                         TextSpan(
                           text: "Create new account",
                           style: TextStyle(
-                            color: Colors.blue, // দ্বিতীয় অংশের রঙ
+                            color: Colors.blue,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -177,7 +174,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                     height: 50,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFFFAF5), // HexaCode Colors
+                      color: const Color(0xFFFFFAF5),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(color: Colors.grey.shade300),
                     ),

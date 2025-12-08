@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:scaleup/src/splash_screen/splash_ui.dart';
+import 'package:provider/provider.dart';
+import 'package:scaleup/src/task_two/provider/product_provider.dart';
 
 void main() {
-  runApp(const ScaleUpAdd());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ProductProvider()..loadProducts(),
+        ),
+      ],
+      child: ScaleUpAdd(),
+    ),
+  );
 }
 
 class ScaleUpAdd extends StatefulWidget {
@@ -21,7 +32,7 @@ class _ScaleUpAddState extends State<ScaleUpAdd> {
         designSize: const Size(360, 690),
         minTextAdapt: true,
         splitScreenMode: true,
-        builder: (context,child){
+        builder: (context, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             home: SplashScreen(),
@@ -31,4 +42,3 @@ class _ScaleUpAddState extends State<ScaleUpAdd> {
     );
   }
 }
-
