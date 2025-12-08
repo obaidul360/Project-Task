@@ -41,60 +41,99 @@ class _DetailsPageState extends State<DetailsPage> {
               const SizedBox(height: 8),
               Text(widget.product.description),
               const SizedBox(height: 16),
+              Divider(height: 10),
               Text(
                 "Price: \$${widget.product.price}",
                 style: const TextStyle(fontSize: 18),
               ),
               const SizedBox(height: 16),
+
               Row(
                 children: [
-
                   IconButton(
                     onPressed: () =>
                         provider.subtractQuantity(widget.product.id),
-                    icon: const Icon(Icons.remove),
+                    icon: const Icon(Icons.remove, size: 35),
                   ),
                   SizedBox(width: 4),
-                  Text("$quantity", style: const TextStyle(fontSize: 20)),
+                  Text("$quantity", style: const TextStyle(fontSize: 22)),
                   SizedBox(width: 4),
                   IconButton(
-                    onPressed: () =>
-                        provider.addQuantity(widget.product.id),
-                    icon: const Icon(Icons.add),
+                    onPressed: () => provider.addQuantity(widget.product.id),
+                    icon: const Icon(Icons.add, size: 35),
                   ),
 
                   const SizedBox(width: 20),
                   Text(
                     "Total: \$${totalPrice.toStringAsFixed(2)}",
-                    style: const TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 20),
                   ),
                 ],
               ),
+              Divider(height: 10),
+              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Center(
+                            child: Text(
+                              "Order Successful!",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w100,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                          duration: Duration(milliseconds: 300),
+                          backgroundColor: Color(0xC9C5EE92),
+                        ),
+                      );
+                    },
                     child: Text(
                       "Order now",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w100,
                       ),
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Center(
+                            child: Text(
+                              "Add to cart Successful!",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w100,
+                                fontSize: 20,
+                              ),
+                            ),
+
+                          ),
+                          backgroundColor: Color(0xC9C5EE92),
+                          duration: Duration(milliseconds: 300),
+                        ),
+                      );
+                    },
                     child: Text(
-                      "Add to card",
+                      "Add to cart",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w100,
                       ),
                     ),
                   ),
+
+
                 ],
               ),
             ],
