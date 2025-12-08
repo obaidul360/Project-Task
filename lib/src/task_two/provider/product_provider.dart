@@ -18,10 +18,11 @@ class ProductProvider extends ChangeNotifier {
     isLoading = false;
     notifyListeners();
   }
+
   //SearchFounction
   void searchProduct(String query) {
     if (query.isEmpty) {
-      filteredProducts = products; // empty হলে সব দেখানো হবে
+      filteredProducts = products;
     } else {
       filteredProducts = products
           .where((p) => p.title.toLowerCase().contains(query.toLowerCase()))

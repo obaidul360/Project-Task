@@ -1,4 +1,3 @@
-/*
 import 'package:flutter/material.dart';
 
 import '../task_two/home/home_ui.dart';
@@ -26,19 +25,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
-      appBar: AppBar(
-        backgroundColor: Color(0xBDFFFFFF),
-        title: const Text(
-          "ScaleUp Add Agency Account",
-          style: TextStyle(
-            color: Color(0x6B000000),
-            fontWeight: FontWeight.w400,
-            fontSize: 30,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      backgroundColor: Color(0xF7FFFEFE),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
@@ -126,7 +113,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                   child: ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(
-                        Color(0xFFFFFAF5), //Color(0xFFFFFAF5),
+                        Color(0xFFFFFAF5),
                       ),
                     ),
                     onPressed: () {
@@ -137,11 +124,11 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                             backgroundColor: Colors.green,
                           ),
                         );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomePage()),
+                        );
                       }
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
-                      );
                     },
                     child: const Text("Login", style: TextStyle(fontSize: 20)),
                   ),
@@ -157,7 +144,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                           style: TextStyle(color: Colors.black, fontSize: 16),
                         ),
                         TextSpan(
-                          text: "Create new account",
+                          text: "Create new account.",
                           style: TextStyle(
                             color: Colors.blue,
                             fontSize: 16,
@@ -239,7 +226,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                     height: 50,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFFFAF5), // HexaCode Colors
+                      color: const Color(0xFFFFFAF5),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(color: Colors.grey.shade300),
                     ),
@@ -272,4 +259,3 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
     );
   }
 }
-*/
