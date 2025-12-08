@@ -11,7 +11,7 @@ class SearchBox extends StatelessWidget {
     final provider = Provider.of<ProductProvider>(context, listen: false);
 
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(8.0),
       child: TextField(
         style: TextStyle(color: Colors.blueAccent, fontSize: 20),
         onChanged: (value) => provider.searchProduct(value),

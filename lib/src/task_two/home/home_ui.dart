@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.person,size: 28,))
+          IconButton(onPressed: () {}, icon: Icon(Icons.person, size: 28)),
         ],
       ),
       drawer: Drawer(),
@@ -41,26 +41,30 @@ class HomePage extends StatelessWidget {
               children: [
                 SearchBox(),
                 CategoryDropdown(),
+                SizedBox(height: 5),
                 Expanded(
-                  child: ListView.builder(
-                    itemCount: provider.filteredProducts.length,
-                    itemBuilder: (context, index) {
-                      final item = provider.filteredProducts[index];
-                      return GestureDetector(
-                        onTap: () {},
-                        child: Card(
-                          elevation: 1,
-                          color: Color(0xBDFFF2F0),
-                          child: ListTile(
-                            leading: Image.network(item.image, height: 50),
-                            title: Text(item.title),
-                            subtitle: Text(
-                              "⭐ ${item.rating.rate}   |   \$${item.price}",
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: ListView.builder(
+                      itemCount: provider.filteredProducts.length,
+                      itemBuilder: (context, index) {
+                        final item = provider.filteredProducts[index];
+                        return GestureDetector(
+                          onTap: () {},
+                          child: Card(
+                            elevation: 1,
+                            color: Color(0xBDFFF2F0),
+                            child: ListTile(
+                              leading: Image.network(item.image, height: 50),
+                              title: Text(item.title),
+                              subtitle: Text(
+                                "⭐ ${item.rating.rate}   |   \$${item.price}",
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
                 ),
               ],

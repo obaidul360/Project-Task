@@ -21,7 +21,7 @@ class CategoryDropdown extends StatelessWidget {
     String selectedCategory = "Filter";
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4),
       child: StatefulBuilder(
         builder: (context, setState) {
           return DropdownButtonFormField<String>(
