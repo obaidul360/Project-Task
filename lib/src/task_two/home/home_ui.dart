@@ -2,8 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:scaleup/src/task_one/login_ui.dart';
-
 import '../product_details/product_details_screen.dart';
 import '../provider/product_provider.dart';
 import '../widgets/filter_box.dart';

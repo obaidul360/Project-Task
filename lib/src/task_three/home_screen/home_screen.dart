@@ -15,7 +15,7 @@ class HomeNotePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
-          "ScaleUp Task-3",
+          "Task-3",
           style: TextStyle(fontWeight: FontWeight.w400, color: Colors.black),
         ),
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,size: 35,)),

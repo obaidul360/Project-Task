@@ -133,13 +133,14 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text("Login Successful!"),
+                            duration: Duration(milliseconds: 300),
                             backgroundColor: Colors.green,
                           ),
                         );
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomeNotePage(),
+                            builder: (context) => HomeUiPage(),// HomeNotePage()//is task-3 class,
                           ), //HomeUiPage()),
                         );
                       }
