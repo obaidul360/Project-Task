@@ -2,14 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../note_model/notes_model.dart';
 import '../../note_provider/note_provider.dart';
-//import '../providers/note_provider.dart';
-//import '../models/note_model.dart';
 
 class NoteEditorPage extends StatefulWidget {
   final NoteModel? note;
-
   NoteEditorPage({this.note});
-
   @override
   _NoteEditorPageState createState() => _NoteEditorPageState();
 }
@@ -17,7 +13,6 @@ class NoteEditorPage extends StatefulWidget {
 class _NoteEditorPageState extends State<NoteEditorPage> {
   final titleC = TextEditingController();
   final bodyC = TextEditingController();
-
   @override
   void initState() {
     if (widget.note != null) {
@@ -30,7 +25,6 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<NoteProvider>(context, listen: false);
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.note == null ? "Add Note" : "Edit Note"),
@@ -61,7 +55,7 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                 Navigator.pop(context);
               },
               child: Text("Save"),
-            )
+            ),
           ],
         ),
       ),

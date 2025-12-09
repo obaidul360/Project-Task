@@ -12,7 +12,6 @@ class NoteModel {
     required this.updatedAt,
     this.isSynced = 0,
   });
-
   Map<String, dynamic> toMap() {
     return {
       "id": id,
