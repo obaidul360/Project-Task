@@ -9,8 +9,8 @@ import '../provider/product_provider.dart';
 import '../widgets/filter_box.dart';
 import '../widgets/search_box.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeUiPage extends StatelessWidget {
+  const HomeUiPage({super.key});
 
   @override
   Widget build(BuildContext context) {

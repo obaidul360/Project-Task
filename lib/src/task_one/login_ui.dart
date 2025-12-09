@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../task_three/home_screen/home_screen.dart';
 import '../task_two/home/home_ui.dart';
 
 class LoginUiScreen extends StatefulWidget {
@@ -126,7 +127,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                         );
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(builder: (context) => HomeNotePage()),//HomeUiPage()),
                         );
                       }
                     },
