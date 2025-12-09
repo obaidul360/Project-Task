@@ -14,7 +14,10 @@ class HomeNotePage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: Text("ScaleUp Task-3",style: TextStyle(fontWeight: FontWeight.w400,color: Colors.black),),
+        title: Text(
+          "ScaleUp Task-3",
+          style: TextStyle(fontWeight: FontWeight.w400, color: Colors.black),
+        ),
         actions: [
           Switch(
             value: themeProvider.isDarkMode,
