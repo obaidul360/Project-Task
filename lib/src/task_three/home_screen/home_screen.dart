@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:scaleup/src/task_three/home_screen/widgets/pop_up.dart';
-import '../note_provider/note_provider.dart';
+import '../all_provider/dark_provider.dart';
+import '../all_provider/note_provider.dart';
 import 'crud/edit_screen.dart';
 
 class HomeNotePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final noteProvider = Provider.of<NoteProvider>(context);
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return Scaffold(
-      appBar: AppBar(title: Text("Notes (SQLite + Sync)")),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        title: Text("ScaleUp Task-3",style: TextStyle(fontWeight: FontWeight.w400,color: Colors.black),),
+        actions: [
+          Switch(
+            value: themeProvider.isDarkMode,
+            onChanged: (value) {
+              themeProvider.toggleTheme(value);
+            },
+          ),
+        ],
+      ),
       body: FutureBuilder(
         future: noteProvider.loadNotes(),
         builder: (context, snapshot) {

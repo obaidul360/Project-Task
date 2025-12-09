@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../all_provider/note_provider.dart';
 import '../../note_model/notes_model.dart';
-import '../../note_provider/note_provider.dart';
+
 
 class NoteEditorPage extends StatefulWidget {
   final NoteModel? note;
