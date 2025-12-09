@@ -18,6 +18,7 @@ class HomeNotePage extends StatelessWidget {
           "ScaleUp Task-3",
           style: TextStyle(fontWeight: FontWeight.w400, color: Colors.black),
         ),
+        leading: IconButton(onPressed: (){}, icon: Icon(Icons.more_vert,size: 35,)),
         actions: [
           Switch(
             value: themeProvider.isDarkMode,

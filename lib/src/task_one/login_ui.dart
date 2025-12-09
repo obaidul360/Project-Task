@@ -26,6 +26,17 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          "Task-1",
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            color: Colors.black,
+            fontSize: 20,
+          ),
+        ),
+      ),
       backgroundColor: Color(0xF7FFFEFE),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -127,7 +138,9 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                         );
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeNotePage()),//HomeUiPage()),
+                          MaterialPageRoute(
+                            builder: (context) => HomeNotePage(),
+                          ), //HomeUiPage()),
                         );
                       }
                     },

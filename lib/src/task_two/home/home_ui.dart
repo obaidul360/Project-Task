@@ -18,16 +18,7 @@ class HomeUiPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => LoginUiScreen()),
-            );
-          },
-          icon: Icon(Icons.arrow_back_rounded),
-        ),
-        title: const Text("Products"),
+        title: Text("Task-2"),
         backgroundColor: Color(0xB3E5C8C2),
         centerTitle: true,
         automaticallyImplyLeading: false,
