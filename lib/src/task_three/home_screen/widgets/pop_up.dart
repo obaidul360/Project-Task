@@ -1,4 +1,8 @@
-void _confirmDelete(BuildContext context, int id) {
+import 'package:flutter/material.dart';
+
+import '../../db/database_services.dart';
+
+void confirmDelete(BuildContext context, int id) {
   showDialog(
     context: context,
     builder: (context) {
@@ -20,7 +24,7 @@ void _confirmDelete(BuildContext context, int id) {
               Navigator.pop(context); // popup close
 
               // UI refresh করতে setState বা Provider notify দরকার
-              (context as Element).markNeedsBuild();
+              //(context as Element).markNeedsBuild();
             },
             child: Text("Delete", style: TextStyle(color: Colors.red)),
           ),
@@ -29,3 +33,4 @@ void _confirmDelete(BuildContext context, int id) {
     },
   );
 }
+
