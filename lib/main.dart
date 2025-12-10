@@ -48,7 +48,7 @@ class _ScaleUpAddState extends State<ScaleUpAdd> {
             theme: ThemeData.light(),
             darkTheme: ThemeData.dark(),
             themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-            home: BottomNavigatinBartScren(),//SplashScreen(),
+            home: SplashScreen(),
           );
         },
       ),

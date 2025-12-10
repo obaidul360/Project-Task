@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../bottom/bottom_nav_bar.dart';
 import '../task_three/home_screen/home_screen.dart';
 import '../task_two/home/home_ui.dart';
 
@@ -28,6 +29,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        automaticallyImplyLeading: false,
         title: Text(
           "Task-1",
           style: TextStyle(
@@ -133,14 +135,14 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text("Login Successful!"),
-                            duration: Duration(milliseconds: 300),
+                            duration: Duration(milliseconds: 400),
                             backgroundColor: Colors.green,
                           ),
                         );
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomeUiPage(),// HomeNotePage()//is task-3 class,
+                            builder: (context) => BottomNavigatinBartScren(),//HomeUiPage() is task-,// HomeNotePage()//is task-3 class,
                           ), //HomeUiPage()),
                         );
                       }

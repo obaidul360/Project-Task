@@ -22,7 +22,6 @@ class _BottomNavigatinBartScrenState extends State<BottomNavigatinBartScren> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
-          print(index);
           setState(() {
             _screenIndex = index;
           });
