@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:scaleup/src/task_three/all_provider/dark_provider.dart';
 import 'package:scaleup/src/task_three/all_provider/note_provider.dart';
 import 'package:scaleup/src/task_two/provider/product_provider.dart';
+import 'package:scaleup/test_code.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +33,6 @@ class ScaleUpAdd extends StatefulWidget {
 }
 
 class _ScaleUpAddState extends State<ScaleUpAdd> {
-
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
@@ -48,7 +48,7 @@ class _ScaleUpAddState extends State<ScaleUpAdd> {
             theme: ThemeData.light(),
             darkTheme: ThemeData.dark(),
             themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-            home: SplashScreen(),
+            home: AuthFile(),//SplashScreen(),
           );
         },
       ),
