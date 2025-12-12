@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../bottom/bottom_nav_bar.dart';
-import '../task_three/home_screen/home_screen.dart';
-import '../task_two/home/home_ui.dart';
+import '../product_src_code/home/home_ui.dart';
 
 class LoginUiScreen extends StatefulWidget {
   const LoginUiScreen({super.key});
@@ -31,7 +29,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
         centerTitle: true,
         automaticallyImplyLeading: false,
         title: Text(
-          "Task-1",
+          "Create Account",
           style: TextStyle(
             fontWeight: FontWeight.w400,
             color: Colors.black,
@@ -142,7 +140,7 @@ class _LoginUiScreenState extends State<LoginUiScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => BottomNavigatinBartScren(),//HomeUiPage() is task-,// HomeNotePage()//is task-3 class,
+                            builder: (context) => HomeUiPage(),
                           ), //HomeUiPage()),
                         );
                       }

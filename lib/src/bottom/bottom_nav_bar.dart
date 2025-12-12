@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../task_one/login_ui.dart';
-import '../task_three/home_screen/home_screen.dart';
-import '../task_two/home/home_ui.dart';
+import '../product_src_code/home/home_ui.dart';
+
 
 class BottomNavigatinBartScren extends StatefulWidget {
   const BottomNavigatinBartScren({super.key});
@@ -14,7 +13,7 @@ class BottomNavigatinBartScren extends StatefulWidget {
 
 class _BottomNavigatinBartScrenState extends State<BottomNavigatinBartScren> {
   int _screenIndex = 0;
-  List screen = [HomeUiPage(), HomeNotePage()];
+  List screen = [HomeUiPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

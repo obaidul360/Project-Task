@@ -16,7 +16,7 @@ class HomeUiPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Task-2"),
+        title: Text("Products"),
         backgroundColor: Color(0xB3E5C8C2),
         centerTitle: true,
         automaticallyImplyLeading: false,
@@ -24,7 +24,6 @@ class HomeUiPage extends StatelessWidget {
           IconButton(onPressed: () {}, icon: Icon(Icons.person, size: 28)),
         ],
       ),
-      drawer: Drawer(),
       body: provider.isLoading
           ? const Center(child: CircularProgressIndicator())
           : Column(
